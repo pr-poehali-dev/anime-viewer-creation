@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, User } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -34,9 +34,13 @@ const Navbar = () => {
           <Search size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
         </div>
         
-        <Button variant="default" className="ml-4">
-          Войти
-        </Button>
+        <div className="flex items-center space-x-3">
+          <Link to="/register">
+            <Button variant="default" className="ml-4">
+              <User size={18} className="mr-2" /> Регистрация
+            </Button>
+          </Link>
+        </div>
       </div>
     </nav>
   );
